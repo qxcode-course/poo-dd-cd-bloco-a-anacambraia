@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-16_20-03-53",
+            "content": "@@ -1,191 +1,21 @@\n-class Towel: %0A    def __init__(self):%0A        self.color = 'red'%0A        self.size = 'p'%0A        self.wetness = '0'%0A%0Atoalha = Towel()%0Aprint(towel.color)%0Aprint(towel.size)%0Aprint(towel.wetness\n+print('minhs toalha'\n )\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-09-16_20-08-54",
+            "content": "@@ -129,25 +129,25 @@\n wel()%0Aprint(\n-T\n+t\n owel.color)%0A\n@@ -148,25 +148,25 @@\n olor)%0Aprint(\n-T\n+t\n owel.size)%0Ap\n@@ -170,17 +170,17 @@\n )%0Aprint(\n-T\n+t\n owel.wet\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-09-16_20-09-24",
+            "content": "@@ -112,19 +112,20 @@\n  '0'%0A%0Ato\n-wel\n+alha\n  = Towel\n@@ -129,25 +129,25 @@\n wel()%0Aprint(\n-t\n+T\n owel.color)%0A\n@@ -148,25 +148,25 @@\n olor)%0Aprint(\n-t\n+T\n owel.size)%0Ap\n@@ -170,17 +170,17 @@\n )%0Aprint(\n-t\n+T\n owel.wet\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-09-16_20-09-55",
+            "content": "class Towel: \n    def __init__(self):\n        self.color = 'red'\n        self.size = 'p'\n        self.wetness = '0'\n\ntowel = Towel()\nprint(towel.color)\nprint(towel.size)\nprint(towel.wetness)",
+            "lines": "10"
+        }
+    ]
+}
