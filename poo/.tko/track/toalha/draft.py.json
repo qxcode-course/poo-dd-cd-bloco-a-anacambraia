@@ -17,8 +17,28 @@
         },
         {
             "label": "2025-09-16_20-09-55",
-            "content": "class Towel: \n    def __init__(self):\n        self.color = 'red'\n        self.size = 'p'\n        self.wetness = '0'\n\ntowel = Towel()\nprint(towel.color)\nprint(towel.size)\nprint(towel.wetness)",
+            "content": "@@ -34,30 +34,8 @@\n lf):\n- #construir meu obejto\n %0A   \n@@ -61,19 +61,8 @@\n red'\n- #atributos\n %0A   \n@@ -129,18 +129,8 @@\n el()\n- #objetosq\n %0Apri\n",
             "lines": "10"
+        },
+        {
+            "label": "2025-09-17_13-58-55",
+            "content": "@@ -32,33 +32,8 @@\n self\n-, color : str, size : str\n ): #\n@@ -56,28 +56,8 @@\n ejto\n- e definir atributos\n %0A   \n@@ -72,22 +72,16 @@\n f.color \n-: str \n = 'red' \n@@ -113,14 +113,8 @@\n ize \n-: str \n = 'p\n@@ -140,698 +140,95 @@\n ess \n-: int \n = '0'\n- \n %0A%0A\n-    def getMaxWetness(self) -%3E int:%0A        if self.size == %22P%22:%0A            return 10%0A        if self.size == %22M%22:%0A            return 20%0A        if self.size == %22G%22:%0A            return 30%0A        return 0%0A%0A    def dry(self, amount: int) -%3E None:%0A        self.wetness += amount%0A        if self.wetness %3E self.getMaxWetness():%0A            \n+towel = Towel() #objetosq%0A\n print(\n-%22\n to\n-alha encharcada%22)%0A            self.wetness = self.getMaxWetness()%0A    %0A    def wringOut(self) -%3E None:%0A        self.wetness = 0%0A    %0A    def isDry(self) -%3E bool:%0A        return self.wetness == 0%0A%0A%0A    def show(self) -%3E None:%0A        print(self)%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.color%7D %7Bself.size%7D %7Bself\n+wel.color)%0Aprint(towel.size)%0Aprint(towel\n .wetness\n %7D%22\n@@ -229,6 +229,5 @@\n ness\n-%7D%22\n+)\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-09-17_23-29-17",
+            "content": "@@ -891,436 +891,4 @@\n ss%7D%22\n-%0A%0Atowel = Towel(%22Azul%22, %22P%22)%0Atowel.show()  # Azul P 0%0Atowel.dry(5)%0Atowel.show()  # Azul P 5%0Aprint(towel.isDry()) # False%0Atowel.dry(5)%0Atowel.show()  # Azul P 10%0Atowel.dry(5) # msg: toalha encharcada%0Atowel.show()  # Azul P 10%0A%0Atowel.wringOut()%0Atowel.show()  # Azul P 0%0A%0Atowel = Towel(%22Verde%22, %22G%22)%0Aprint(towel.isDry()) # True%0Atowel.dry(30)%0Atowel.show()  # Verde G 30%0Aprint(towel.isDry()) # False%0Atowel.dry(1)  # msg: toalha encharcada\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-17_23-30-35",
+            "content": "@@ -889,16 +889,282 @@\n ness%7D%22%0A%0A\n+towel = Towel(%22Azul%22, %22P%22)%0Atowel.show()  # Azul P 0%0Atowel.dry(5)%0Atowel.show()  # Azul P 5%0Aprint(towel.isDry()) # False%0Atowel.dry(5)%0Atowel.show()  # Azul P 10%0Atowel.dry(5) # msg: toalha encharcada%0Atowel.show()  # Azul P 10%0A%0Atowel.wringOut()%0Atowel.show()  # Azul P 0%0A%0A\n towel = \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-09-17_23-31-54",
+            "content": "class Towel: \n    def __init__(self, color : str, size : str): #construir meu obejto e definir atributos\n        self.color : str = 'red' #atributos\n        self.size : str = 'p'\n        self.wetness : int = '0' \n\n    def getMaxWetness(self) -> int:\n        if self.size == \"P\":\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0\n\n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n        if self.wetness > self.getMaxWetness():\n            print(\"toalha encharcada\")\n            self.wetness = self.getMaxWetness()\n    \n    def wringOut(self) -> None:\n        self.wetness = 0\n    \n    def isDry(self) -> bool:\n        return self.wetness == 0\n\n\n    def show(self) -> None:\n        print(self)\n\n    def __str__(self) -> str:\n        return f\"{self.color} {self.size} {self.wetness}\"\n\ntowel = Towel(\"Verde\", \"G\")\nprint(towel.isDry()) # True\ntowel.dry(30)\ntowel.show()  # Verde G 30\nprint(towel.isDry()) # False\ntowel.dry(1)  # msg: toalha encharcada",
+            "lines": "40"
         }
     ]
 }
