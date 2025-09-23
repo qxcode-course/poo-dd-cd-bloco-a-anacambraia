@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-23_19-19-37",
+            "content": "@@ -416,9 +416,8 @@\n == %22\n-$\n end%22\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-09-23_19-20-47",
+            "content": "@@ -154,16 +154,34 @@\n         \n+self.age : int = 0\n %0A%0A    de\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-09-23_19-21-42",
+            "content": "@@ -535,17 +535,16 @@\n %5B0%5D == %22\n-$\n show%22:%0A \n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-09-23_19-22-21",
+            "content": "@@ -449,13 +449,11 @@\n == %22\n-$init\n+new\n %22:%0A \n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-09-23_19-22-53",
+            "content": "@@ -155,16 +155,17 @@\n        %0A\n+%0A\n     def \n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-09-23_19-25-02",
+            "content": "@@ -216,16 +216,27 @@\n species%7D\n+ %7Bself.age%7D\n  %7Bself.s\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-23_19-26-00",
+            "content": "@@ -58,16 +58,27 @@\n de : str\n+, age : int\n ): %0A    \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-23_19-26-18",
+            "content": "@@ -306,17 +306,16 @@\n input()%0A\n-%0A\n         \n@@ -371,16 +371,17 @@\n %5B0%5D == %22\n+$\n end%22:%0A  \n@@ -422,16 +422,17 @@\n %5B0%5D == %22\n+$\n init%22:%0A \n@@ -514,16 +514,17 @@\n %5B0%5D == %22\n+$\n show%22:%0A \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-23_19-32-44",
+            "content": "@@ -306,16 +306,17 @@\n input()%0A\n+%0A\n         \n@@ -349,9 +349,8 @@\n it(%22\n-$\n  %22)%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-09-23_19-33-54",
+            "content": "@@ -345,16 +345,17 @@\n split(%22$\n+ \n %22)%0A     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-23_19-33-59",
+            "content": "@@ -262,12 +262,8 @@\n (%22%22,\n- %22%22,\n  %22%22)\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-23_19-37-09",
+            "content": "@@ -258,16 +258,20 @@\n mal (%22%22,\n+ %22%22,\n  %22%22)%0A   \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-23_19-37-23",
+            "content": "@@ -47,24 +47,25 @@\n : str, sound\n+e\n  : str): %0A  \n@@ -118,16 +118,17 @@\n lf.sound\n+e\n  : str =\n@@ -137,109 +137,9 @@\n ound\n-%0A        self.age : int = 0%0A    #def makeSound(self,)%0A    #def ageBy(self, increment : int) -%3E None:%0A\n+e\n %0A   \n@@ -209,20 +209,9 @@\n ies%7D\n-:%7Bself.age%7D:\n+ \n %7Bsel\n@@ -217,16 +217,17 @@\n lf.sound\n+e\n %7D%22%0A%0Adef \n@@ -248,15 +248,8 @@\n imal\n-:Animal\n  = A\n@@ -291,16 +291,20 @@\n     line\n+:str\n  = input\n@@ -310,34 +310,8 @@\n t()%0A\n-        print(%22$%22 + line)%0A\n     \n@@ -344,17 +344,17 @@\n .split(%22\n- \n+$\n %22)%0A     \n@@ -491,53 +491,8 @@\n %5B2%5D%0A\n-            animal = Animal (species, sound)%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-23_19-59-23",
+            "content": "@@ -353,17 +353,16 @@\n  animal:\n- \n Animal =\n@@ -455,16 +455,27 @@\n     args\n+: list%5Bstr%5D\n  = line.\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-09-23_20-02-20",
+            "content": "@@ -602,16 +602,17 @@\n    sound\n+e\n  = args%5B\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-09-23_20-03-20",
+            "content": "@@ -163,16 +163,94 @@\n = 0%0A    \n+#def makeSound(self,)%0A    #def ageBy(self, increment : int) -%3E None:%0A%0A        \n %0A    def\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-09-23_20-11-31",
+            "content": "class Animal: \n    def __init__(self, species : str, sound : str): \n        self.species : str = species \n        self.sound : str = sound\n        self.age : int = 0\n    \n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n\ndef main():\n    animal: Animal = Animal (\"\", \"\")\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args [0] == \"init\":\n            species = args[1]\n            sound = args[2]\n            animal = Animal (species, sound)\n        elif args[0] == \"show\":\n            print(animal)\n        else:\n            print(\"fail:comando invalido\")\nmain()",
+            "lines": "26"
+        }
+    ]
+}

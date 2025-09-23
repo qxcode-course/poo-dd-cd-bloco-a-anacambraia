@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-23_19-02-27",
+            "content": "@@ -1142,13 +1142,11 @@\n == %22\n-criar\n+new\n %22:%0A \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-09-23_19-02-54",
+            "content": "@@ -1138,17 +1138,16 @@\n %5B0%5D == %22\n-$\n criar%22:%0A\n@@ -1269,16 +1269,12 @@\n == %22\n-$mostrar\n+show\n %22:%0A \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-09-23_19-04-44",
+            "content": "@@ -1088,17 +1088,16 @@\n %5B0%5D == %22\n-$\n end%22:%0A  \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-09-23_19-05-07",
+            "content": "class Towel: \n    def __init__(self, color : str, size : str): #construtor\n        self.color : str = color #atributos, definem o estado da minha entidade Self \u00e9 um parameto dentro da classe\n        self.size : str = size\n        self.wetness : int = 0\n\n        \n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n        if self.wetness > self.getMaxWetness():\n            print(\"toalha encharcada\")\n            self.wetness = self.getMaxWetness()\n\n    def getMaxWetness(self) -> int:\n        if self.size == \"P\":\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0\n\n    def wringOut(self) -> None:\n        self.wetness = 0\n    \n    def isDry(self) -> bool:\n        return self.wetness == 0\n\n\n    def show(self) -> None:\n        print(self)\n    \n\n    def __str__(self) -> str:\n        return f\"{self.color} {self.size} {self.wetness}\"\n\n\ndef main():\n    toalha = Towel (\"\", \"\")\n    while True:\n        line:str = input()\n        args: list[str] = line.split(\" \")\n        if args[0] == \"$end\":\n            break\n        elif args [0] == \"$criar\":\n            color = args[1]\n            size = args[2]\n            toalha = Towel(color,size)\n        elif args[0] == \"$mostrar\":\n            print(toalha)\n        elif args[0] == \"dry\":\n            amount: int = int(args[1])\n            toalha.dry(amount)\n        else:\n            print(\"fail:comando invalido\")\nmain()",
+            "lines": "56"
+        }
+    ]
+}
