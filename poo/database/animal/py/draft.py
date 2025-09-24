@@ -3,6 +3,21 @@ class Animal:
         self.species : str = species 
         self.sound : str = sound
         self.age : int = 0
+
+    def ageBy(self, amount: int) -> None:
+        self.age += amount
+        if self.age > self.ageBy():
+            print("warning:" + {species} + "morreu") 
+            self.age = self.ageBy()
+
+    def grow(self) -> str:
+        if self.age == "grow 1":
+            return 10
+        if self.age == "M":
+            return 20
+        if self.age == "G":
+            return 30
+        return 0
     
     def __str__(self) -> str:
         return f"{self.species}:{self.age}:{self.sound}"

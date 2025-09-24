@@ -82,8 +82,13 @@
         },
         {
             "label": "2025-09-23_20-11-31",
-            "content": "class Animal: \n    def __init__(self, species : str, sound : str): \n        self.species : str = species \n        self.sound : str = sound\n        self.age : int = 0\n    \n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n\ndef main():\n    animal: Animal = Animal (\"\", \"\")\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args [0] == \"init\":\n            species = args[1]\n            sound = args[2]\n            animal = Animal (species, sound)\n        elif args[0] == \"show\":\n            print(animal)\n        else:\n            print(\"fail:comando invalido\")\nmain()",
+            "content": "@@ -162,404 +162,8 @@\n  = 0\n-%0A%0A    def ageBy(self, amount: int) -%3E None:%0A        self.age += amount%0A        if self.age %3E self.ageBy():%0A            print(%22warning:%22 + %7Bspecies%7D + %22morreu%22) %0A            self.age = self.ageBy()%0A%0A    def grow(self) -%3E str:%0A        if self.age == %22grow 1%22:%0A            return 10%0A        if self.age == %22M%22:%0A            return 20%0A        if self.age == %22G%22:%0A            return 30%0A        return 0\n %0A   \n",
             "lines": "26"
+        },
+        {
+            "label": "2025-09-23_23-33-12",
+            "content": "class Animal: \n    def __init__(self, species : str, sound : str): \n        self.species : str = species \n        self.sound : str = sound\n        self.age : int = 0\n\n    def ageBy(self, amount: int) -> None:\n        self.age += amount\n        if self.age > self.ageBy():\n            print(\"warning:\" + {species} + \"morreu\") \n            self.age = self.ageBy()\n\n    def grow(self) -> str:\n        if self.age == \"grow 1\":\n            return 10\n        if self.age == \"M\":\n            return 20\n        if self.age == \"G\":\n            return 30\n        return 0\n    \n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n\ndef main():\n    animal: Animal = Animal (\"\", \"\")\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args [0] == \"init\":\n            species = args[1]\n            sound = args[2]\n            animal = Animal (species, sound)\n        elif args[0] == \"show\":\n            print(animal)\n        else:\n            print(\"fail:comando invalido\")\nmain()",
+            "lines": "41"
         }
     ]
 }
