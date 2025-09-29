@@ -9,11 +9,11 @@ expanded:
 - campanha-principal
 - bloco_b-primeiras-classes
 tasks:
-  animal: '{rate:25}'
+  animal: '{rate:100, human:Sim__amigo, iagen:sim__gpt, guide:sim, alone:7, study:300}'
 flags:
   quests: 0
   tracks: 1
   tasks: 2
   graph: 1
   xray: 0
-index: animal
+index: carro
