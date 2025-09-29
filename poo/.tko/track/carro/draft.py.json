@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-29_12-42-15",
+            "content": "@@ -380,17 +380,16 @@\n f main()\n-:\n %0A    car\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-29_12-42-54",
+            "content": "@@ -324,19 +324,48 @@\n %7D:%7Bself.\n-gas\n+passMax%7D:%7Bself.gas%7D:%7Bself.gasMax\n %7D:%7Bself.\n@@ -611,17 +611,8 @@\n ro)%0A\n-        %0A\n main\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-29_12-48-55",
+            "content": "@@ -578,14 +578,23 @@\n (carro)%0A\n+        %0A\n main()\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-09-29_12-49-31",
+            "content": "class Car:\n    def __init__(self, passa : int, passMax : int, gas : int, gasMax : int, Km : int):\n        self.passa : int = passa\n        self.passMax : int = passMax\n        self.gas : int = gas\n        self.gasMax : int = gasMax\n        self.Km : int = Km\n\n    \n    def __str__(self) -> str:\n        return f\"{self.passa}:{self.gas}:{self.Km}\"\n\ndef main():\n    carro = Car (\"\", \"\")\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(carro)\nmain()",
+            "lines": "23"
+        }
+    ]
+}

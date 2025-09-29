@@ -26,3 +26,10 @@
 2025-09-29 01:35:44, EXEC, v:1, k:animal, mode:FULL, rate:100
 2025-09-29 01:35:55, MOVE, v:1, k:animal, mode:BACK
 2025-09-29 01:40:45, SELF, v:1, k:animal, rate:100, human:Sim__amigo, iagen:sim__gpt, guide:sim, alone:7, study:300
+2025-09-29 12:24:40, MOVE, v:1, k:carro, mode:DOWN
+2025-09-29 12:42:13, MOVE, v:1, k:carro, mode:PICK
+2025-09-29 12:42:15, EXEC, v:1, k:carro, mode:FULL, rate:0, size:23
+2025-09-29 12:42:54, EXEC, v:1, k:carro, mode:FULL, rate:0, size:23
+2025-09-29 12:48:55, EXEC, v:1, k:carro, mode:FULL, rate:0, size:24
+2025-09-29 12:49:31, EXEC, v:1, k:carro, mode:FULL, rate:0, size:23
+2025-09-29 12:49:51, MOVE, v:1, k:carro, mode:BACK
