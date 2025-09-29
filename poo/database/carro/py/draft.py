@@ -1,12 +1,13 @@
 class Car:
     def __init__(self, passa : int, passMax : int, gas : int, gasMax : int, Km : int):
-        self.passa : int = passa
-        self.passMax : int = passMax
-        self.gas : int = gas
-        self.gasMax : int = gasMax
-        self.Km : int = Km
+        self.passa : int = 0
+        self.passMax : int = 2
+        self.gas : int = 0
+        self.gasMax : int = 100
+        self.Km : int = 0
 
-    
+    def enter(self, amount: int) -> None:
+        
     def __str__(self) -> str:
         return f"{self.passa}:{self.gas}:{self.Km}"
 

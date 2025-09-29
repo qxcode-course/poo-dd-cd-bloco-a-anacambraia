@@ -17,8 +17,123 @@
         },
         {
             "label": "2025-09-23_19-05-07",
-            "content": "class Towel: \n    def __init__(self, color : str, size : str): #construtor\n        self.color : str = color #atributos, definem o estado da minha entidade Self \u00e9 um parameto dentro da classe\n        self.size : str = size\n        self.wetness : int = 0\n\n        \n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n        if self.wetness > self.getMaxWetness():\n            print(\"toalha encharcada\")\n            self.wetness = self.getMaxWetness()\n\n    def getMaxWetness(self) -> int:\n        if self.size == \"P\":\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0\n\n    def wringOut(self) -> None:\n        self.wetness = 0\n    \n    def isDry(self) -> bool:\n        return self.wetness == 0\n\n\n    def show(self) -> None:\n        print(self)\n    \n\n    def __str__(self) -> str:\n        return f\"{self.color} {self.size} {self.wetness}\"\n\n\ndef main():\n    toalha = Towel (\"\", \"\")\n    while True:\n        line:str = input()\n        args: list[str] = line.split(\" \")\n        if args[0] == \"$end\":\n            break\n        elif args [0] == \"$criar\":\n            color = args[1]\n            size = args[2]\n            toalha = Towel(color,size)\n        elif args[0] == \"$mostrar\":\n            print(toalha)\n        elif args[0] == \"dry\":\n            amount: int = int(args[1])\n            toalha.dry(amount)\n        else:\n            print(\"fail:comando invalido\")\nmain()",
+            "content": "@@ -1088,16 +1088,17 @@\n %5B0%5D == %22\n+$\n end%22:%0A  \n@@ -1139,16 +1139,17 @@\n %5B0%5D == %22\n+$\n criar%22:%0A\n@@ -1267,16 +1267,17 @@\n %5B0%5D == %22\n+$\n mostrar%22\n",
             "lines": "56"
+        },
+        {
+            "label": "2025-09-29_18-49-53",
+            "content": "@@ -1027,34 +1027,8 @@\n t()%0A\n-        print(%22$%22 + line)%0A\n     \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-09-29_18-50-41",
+            "content": "@@ -1323,22 +1323,14 @@\n int(\n-%22Cor:%22 + color\n+toalha\n )%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_18-58-23",
+            "content": "@@ -1324,17 +1324,16 @@\n nt(%22Cor:\n- \n %22 + colo\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_18-58-36",
+            "content": "@@ -1338,29 +1338,8 @@\n olor\n- %22, Tamanho: %22 + size\n )%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_18-59-25",
+            "content": "@@ -1336,16 +1336,18 @@\n  color %22\n+, \n Tamanho:\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_18-59-47",
+            "content": "@@ -1344,16 +1344,17 @@\n Tamanho:\n+ \n %22 + size\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-00-16",
+            "content": "@@ -1334,16 +1334,34 @@\n  + color\n+ %22Tamanho:%22 + size\n )%0A      \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-00-30",
+            "content": "@@ -1338,29 +1338,8 @@\n olor\n- + %22Tamanho: %22 + size\n )%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-05-36",
+            "content": "@@ -1338,18 +1338,16 @@\n olor + %22\n-, \n Tamanho:\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-05-55",
+            "content": "@@ -1361,37 +1361,8 @@\n size\n- + %22Umidade: %22 + self.wetness\n )%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-10-37",
+            "content": "@@ -1371,16 +1371,31 @@\n idade: %22\n+ + self.wetness\n )%0A      \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-10-53",
+            "content": "@@ -1361,18 +1361,16 @@\n size + %22\n-, \n Umidade:\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-11-04",
+            "content": "@@ -1375,25 +1375,10 @@\n ade:\n+ \n %22\n-  + self.wetness\n )%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-42-41",
+            "content": "@@ -1372,16 +1372,32 @@\n midade:%22\n+  + self.wetness\n )%0A      \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-43-54",
+            "content": "@@ -1371,18 +1371,16 @@\n Umidade:\n- 0\n %22)%0A     \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_19-48-56",
+            "content": "@@ -901,13 +901,8 @@\n n f%22\n-Cor: \n %7Bsel\n@@ -913,18 +913,8 @@\n lor%7D\n-, Tamanho:\n  %7Bse\n@@ -925,18 +925,8 @@\n ize%7D\n-, Umidade:\n  %7Bse\n@@ -1319,22 +1319,71 @@\n   print(\n-toalha\n+%22Cor: %22 + color + %22, Tamanho: %22 + size + %22, Umidade: 0%22\n )%0A      \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_20-03-41",
+            "content": "@@ -1356,73 +1356,8 @@\n ha)%0A\n-        elif args%5B0%5D == %22seca%22%0A            print(toalha.isDry())%0A\n     \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-09-29_20-04-41",
+            "content": "@@ -1382,17 +1382,16 @@\n = %22seca%22\n-:\n %0A       \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-09-29_20-04-56",
+            "content": "@@ -1406,17 +1406,8 @@\n int(\n-%22sim%22 if \n toal\n@@ -1420,19 +1420,8 @@\n ry()\n- else %22nao%22\n )%0A  \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-09-29_20-06-15",
+            "content": "@@ -1467,15 +1467,11 @@\n == %22\n-enxugar\n+dry\n %22:%0A \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-09-29_20-07-21",
+            "content": "@@ -1356,72 +1356,8 @@\n ha)%0A\n-        elif args%5B0%5D == %22torcer%22:%0A            toalha.wringOut()%0A\n     \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-09-29_20-09-25",
+            "content": "@@ -352,17 +352,16 @@\n etness %3E\n-=\n  self.ge\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-09-29_20-23-04",
+            "content": "class Towel: \n    def __init__(self, color : str, size : str): #construtor\n        self.color : str = color #atributos, definem o estado da minha entidade Self \u00e9 um parameto dentro da classe\n        self.size : str = size\n        self.wetness : int = 0\n\n        \n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n        if self.wetness >= self.getMaxWetness():\n            print(\"toalha encharcada\")\n            self.wetness = self.getMaxWetness()\n\n    def getMaxWetness(self) -> int:\n        if self.size == \"P\":\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0\n\n    def wringOut(self) -> None:\n        self.wetness = 0\n    \n    def isDry(self) -> bool:\n        return self.wetness == 0\n\n\n    def show(self) -> None:\n        print(self)\n    \n\n    def __str__(self) -> str:\n        return f\"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}\"\n\n\ndef main():\n    toalha = Towel (\"\", \"\")\n    while True:\n        line:str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args [0] == \"criar\":\n            color = args[1]\n            size = args[2]\n            toalha = Towel(color,size)\n        elif args[0] == \"mostrar\":\n            print(toalha)\n        elif args[0] == \"torcer\":\n            toalha.wringOut()\n        elif args[0] == \"seca\":\n            print(\"sim\" if toalha.isDry() else \"nao\")\n        elif args[0] == \"enxugar\":\n            amount: int = int(args[1])\n            toalha.dry(amount)\n        else:\n            print(\"fail:comando invalido\")\nmain()",
+            "lines": "61"
         }
     ]
 }

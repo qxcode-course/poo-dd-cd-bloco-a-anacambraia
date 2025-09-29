@@ -17,8 +17,48 @@
         },
         {
             "label": "2025-09-29_12-49-31",
-            "content": "class Car:\n    def __init__(self, passa : int, passMax : int, gas : int, gasMax : int, Km : int):\n        self.passa : int = passa\n        self.passMax : int = passMax\n        self.gas : int = gas\n        self.gasMax : int = gasMax\n        self.Km : int = Km\n\n    \n    def __str__(self) -> str:\n        return f\"{self.passa}:{self.gas}:{self.Km}\"\n\ndef main():\n    carro = Car (\"\", \"\")\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(carro)\nmain()",
+            "content": "@@ -157,9 +157,15 @@\n t = \n-2\n+passMax\n %0A   \n@@ -222,11 +222,14 @@\n t = \n-100\n+gasMax\n %0A   \n",
             "lines": "23"
+        },
+        {
+            "label": "2025-09-29_18-46-12",
+            "content": "@@ -308,16 +308,37 @@\n f.passa%7D\n+:%7Bself.gas%7D:%7Bself.Km%7D\n %22%0A%0Adef m\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-29_18-46-37",
+            "content": "@@ -145,33 +145,33 @@\n passMax : int = \n-0\n+2\n %0A        self.ga\n@@ -212,16 +212,18 @@\n : int = \n+10\n 0%0A      \n@@ -312,29 +312,8 @@\n ssa%7D\n-:%7Bself.gas%7D:%7Bself.Km%7D\n %22%0A%0Ad\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-29_18-47-45",
+            "content": "@@ -110,33 +110,37 @@\n f.passa : int = \n-0\n+passa\n %0A        self.pa\n@@ -157,9 +157,9 @@\n t = \n-2\n+0\n %0A   \n@@ -172,33 +172,35 @@\n elf.gas : int = \n-0\n+gas\n %0A        self.ga\n@@ -216,10 +216,8 @@\n t = \n-10\n 0%0A  \n@@ -238,18 +238,24 @@\n : int = \n-0%0A\n+Km%0A%0A    \n %0A    def\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-09-29_19-19-07",
+            "content": "@@ -356,12 +356,8 @@\n (%22%22,\n- %22%22,\n  %22%22)\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-09-29_19-20-04",
+            "content": "@@ -141,33 +141,33 @@\n passMax : int = \n-0\n+2\n %0A        self.ga\n@@ -198,32 +198,34 @@\n .gasMax : int = \n+10\n 0%0A        self.K\n@@ -352,16 +352,20 @@\n Car (%22%22,\n+ %22%22,\n  %22%22)%0A   \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-09-29_19-20-30",
+            "content": "@@ -143,32 +143,89 @@\n ssMax : int = 0%0A\n+        self.gas : int = 0%0A        self.gasMax : int = 0%0A\n         self.Km \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-09-29_19-20-50",
+            "content": "@@ -54,16 +54,41 @@\n x : int,\n+ gas : int, gasMax : int,\n  Km : in\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-09-29_19-21-15",
+            "content": "class Car:\n    def __init__(self, passa : int, passMax : int, Km : int):\n        self.passa : int = 0\n        self.passMax : int = 0\n        self.Km : int = 0\n\n    def __str__(self) -> str:\n        return f\"{self.passa}:{self.gas}:{self.Km}\"\n\ndef main():\n    carro = Car (\"\", \"\")\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(carro)\nmain()",
+            "lines": "20"
         }
     ]
 }
