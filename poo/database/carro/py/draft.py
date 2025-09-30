@@ -4,7 +4,7 @@ class Car:
         self.Km = 0
         self.passMax = 2
         self.gas = 0
-        self.gasMax = 100 
+        self.gasMax = 100
 
     def enter(self):
         if self.passa >= self.passMax:
