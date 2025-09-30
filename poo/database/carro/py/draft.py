@@ -18,23 +18,23 @@ class Car:
         else:
             self.passa -= 1
 
-    def drive(self, distance):
+    def drive(self, distance =0):
         if self.passa == 0:
-            print("fail: não há ninguém no carro")
+            print("fail: nao ha ninguem no carro")
             return
         if self.gas == 0:
             print("fail: tanque vazio")
             return
         if self.gas >= distance:
-            self.km += distance
+            self.Km += distance
             self.gas -= distance
         else:
             distance = self.gas
-            self.km += distance
+            self.Km += distance
             self.gas = 0
-            print(f"fail: tanque vazio após andar {distance} km.")
+            print(f"fail: tanque vazio apos andar {distance} km")
 
-    def fuel(self, amount) -> int:
+    def fuel(self, amount=0) -> int:
         self.gas += amount
         if self.gas > self.gasMax:
             self.gas = self.gasMax
@@ -59,5 +59,9 @@ def main():
         elif args[0] == "leave":
             carro.leave()
         elif args[0] == "fuel":
-            carro.fuel()
+            amount = int(args[1])
+            carro.fuel(amount)
+        elif args[0] == "drive":
+            distance = int(args[1])
+            carro.drive(distance)
 main()
